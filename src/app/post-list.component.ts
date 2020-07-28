@@ -16,10 +16,10 @@ export class PostListComponent {
   }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getPosts();
   }
 
-  getHeroes() {
+  getPosts() {
     this.postService.getAll();
   }
 }
