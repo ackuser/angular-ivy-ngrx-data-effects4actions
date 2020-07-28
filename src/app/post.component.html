@@ -1,6 +1,3 @@
-<div>
-	<span>{{ post.userId }}</span>
-	<span>{{ post.id }}</span>
-	<span>{{ post.title }}</span>
-	<span>{{ post.body }}</span>
-</div>
+<p class="title">{{ post.id }}: {{ post.title }}</p>
+<img [src]="https://picsum.photos/id/{{userId}}" alt="Avatar">
+<p class="body">{{ post.body }}</p>
