@@ -11,6 +11,10 @@ import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
 
 
+const defaultDataServiceConfig: DefaultDataServiceConfig = {
+  root: 'https://jsonplaceholder.typicode.com/',
+  timeout: 3000, // request timeout
+}
 
 @NgModule({
   imports: [ 
@@ -22,6 +26,7 @@ import { entityConfig } from './entity-metadata';
     EntityDataModule.forRoot(entityConfig)
  ],
   declarations: [ PostListComponent, PostComponent ],
-  bootstrap:    [ PostListComponent ]
+  bootstrap:    [ PostListComponent ],
+  providers: [{ provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig }]
 })
 export class AppModule { }

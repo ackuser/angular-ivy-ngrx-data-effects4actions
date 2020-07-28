@@ -1,1 +1,3 @@
- <post *ngFor="let post of posts$ | async"></post>
+ <ng-container *ngFor="let post of posts$ | async">
+   <post [post]="post"></post>
+ </ng-container>

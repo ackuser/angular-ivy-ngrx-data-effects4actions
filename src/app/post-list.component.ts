@@ -9,12 +9,10 @@ import { PostService } from "./post.service";
   styleUrls: ["./post-list.component.css"]
 })
 export class PostListComponent {
-  loading$: Observable<boolean>;
   posts$: Observable<Post[]>;
 
   constructor(private postService: PostService) {
     this.posts$ = postService.entities$;
-    this.loading$ = postService.loading$;
   }
 
   ngOnInit() {
