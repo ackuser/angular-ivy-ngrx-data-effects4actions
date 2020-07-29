@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 const defaultDataServiceConfig: DefaultDataServiceConfig = {
@@ -23,7 +24,8 @@ const defaultDataServiceConfig: DefaultDataServiceConfig = {
     HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    EntityDataModule.forRoot(entityConfig)
+    EntityDataModule.forRoot(entityConfig),
+    StoreDevtoolsModule.instrument({}),
  ],
   declarations: [ PostListComponent, PostComponent ],
   bootstrap:    [ PostListComponent ],
