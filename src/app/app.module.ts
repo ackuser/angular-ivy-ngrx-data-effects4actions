@@ -10,7 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
+import { PostEffects } from './post.effects';
 
 const defaultDataServiceConfig: DefaultDataServiceConfig = {
   root: 'https://jsonplaceholder.typicode.com/',
@@ -24,7 +24,7 @@ const defaultDataServiceConfig: DefaultDataServiceConfig = {
     FormsModule,
     HttpClientModule,
     StoreModule.forRoot({}),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([PostEffects]),
     EntityDataModule.forRoot(entityConfig),
     StoreDevtoolsModule.instrument({}),
  ],
