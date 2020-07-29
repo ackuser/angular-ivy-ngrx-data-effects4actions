@@ -17,6 +17,7 @@ const defaultDataServiceConfig: DefaultDataServiceConfig = {
   timeout: 3000, // request timeout
 }
 
+
 @NgModule({
   imports: [ 
     BrowserModule, 
